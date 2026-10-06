@@ -8,7 +8,7 @@ module.exports = defineConfig({
   video: false,
 
   e2e: {
-    baseUrl: "https://example.cypress.io",
+    baseUrl: "https://qauto.forstudy.space",
 
     setupNodeEvents(on, config) {
       // implement node event listeners here
