@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+      image: cypress/browsers:node-24.21.0-chrome-154.0.8037.92-1-ff-157.0-edge-154.0.4258.48-1
       options: --user 1001
 
     steps:
