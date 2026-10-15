@@ -1,0 +1,29 @@
+name: Cypress tests in Docker
+
+on:
+  push:
+    branches:
+      - hw-31-1
+  pull_request:
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    container:
+      image: cypress/browsers:node-24.21.0-chrome-154.0.8037.92-1-ff-157.0-edge-154.0.4258.48-1
+      options: --user 1001
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress tests
+        run: >
+          npx cypress run
+          --browser chrome
+          --config-file cypress.qauto.config.js
+          --spec cypress/e2e/hw19.cy.js
