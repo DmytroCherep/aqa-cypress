@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --browser chrome"
+    "cy:run": "cypress run --browser chrome",
+    "test:qauto": "cypress run --config-file cypress.qauto.config.js",
+    "test:qauto2": "cypress run --config-file cypress.qauto2.config.js",
+    "open:qauto": "cypress open --config-file cypress.qauto.config.js",
+    "open:qauto2": "cypress open --config-file cypress.qauto2.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +25,7 @@
   },
   "homepage": "https://github.com/DmytroCherep/aqa-cypress#readme",
   "devDependencies": {
-    "cypress": "^16.1.1"
+    "cypress": "^16.1.1",
+    "cypress-mochawesome-reporter": "^5.0.0"
   }
 }
